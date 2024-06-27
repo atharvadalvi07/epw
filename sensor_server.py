@@ -169,7 +169,7 @@ def calculate_wellness_index(temp_current, humidity_current, pm25_current, co2_c
         'AQ': {'temperature': 0.11, 'humidity': 0.11, 'ach': 0.11, 'pm25': 0.22, 'co2': 0.22, 'tvoc': 0.22},
         'PP': {'temperature': 0.1, 'humidity': 0.1, 'ach': 0.1, 'pm25': 0.3, 'co2': 0.1, 'tvoc': 0.3},
         'GG': {'temperature': 0.2, 'humidity': 0.2, 'ach': 0.2, 'pm25': 0.2, 'co2': 0.2, 'tvoc': 0.2},
-        'IEW': {'temperature': 0.2, 'humidity': 0.2, 'ach': 0.2, 'pm25': 0.2, 'co2': 0.2, 'tvoc': 0.2}
+        'IEW': {'temperature': 0.16, 'humidity': 0.16, 'ach': 0.16, 'pm25': 0.16, 'co2': 0.16, 'tvoc': 0.16}
     }
     
     weights = guidelines.get(guideline, guidelines['IEW'])
