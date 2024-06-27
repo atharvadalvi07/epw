@@ -1,0 +1,42 @@
+.chart-container {
+    display: flex;
+    overflow-x: auto;
+  }
+  
+  .chart {
+    flex: 0 0 auto;
+    width: 121px; /* Adjust width as needed */
+    margin-right: 5px; /* Reduce margin to bring graphs closer */
+    margin-bottom: 20px;
+    margin-top: 20px
+  }
+  
+  .chart-title {
+    text-align: center;
+    font-size: 12px;
+    margin-bottom: 5px; /* Reduce margin to bring titles closer to the charts */
+  }
+  
+  .tooltip {
+    font-size: 10px;
+  }
+  
+  .grid line {
+    stroke: #e0e0e0;
+    stroke-width: 0.5;
+  }
+  
+  .grid path {
+    stroke-width: 0;
+  }
+  
+  .x-axis line, .y-axis line {
+    stroke: black; /* Axis line color */
+    stroke-width: 1; /* Axis line width */
+  }
+  
+  .x-axis .domain, .y-axis .domain {
+    stroke: black; /* Axis domain line color */
+    stroke-width: 1; /* Axis domain line width */
+  }
+  

@@ -1,0 +1,44 @@
+.gradientcol {
+  background: #d5cae2;
+  background: linear-gradient(270deg, #d2cbff, #fff2fe);
+}
+.secondcard {
+  background: linear-gradient(270deg, #ffc8a8, rgb(255, 241, 214));
+}
+.thirdcard {
+  background: linear-gradient(270deg, #dae9ff, #ebf8fe);
+}
+.fourthcard {
+  background: linear-gradient(270deg, #ffecb8, #fff8e7);
+}
+.fifthcard {
+  background: linear-gradient(270deg, #b8b0fc, #e1deff);
+}
+/* .carousel .carousel-status {
+    bottom: 0;
+    left: 0;
+    right: 30px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+  } */
+
+@media only screen and (max-width: 600px) {
+  .slide {
+    min-width: 100% !important;
+  }
+}
+
+/* Add media queries for responsive styles */
+@media (max-width: 768px) {
+  /* Adjust styles for smaller screens (e.g., mobile) */
+  .carousel-container {
+    /* Adjust container styles for smaller screens */
+  }
+
+  /* Adjust arrow container styles for smaller screens */
+  .arrow-container {
+    top: 10px; /* Adjust the top position for mobile */
+    right: 10px; /* Adjust the right position for mobile */
+  }
+}
