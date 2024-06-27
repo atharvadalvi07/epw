@@ -118,6 +118,7 @@ def calculate_iew_co2(co2_current, co2_max=5000):
     return iew_co2
 
 def calculate_iew_ach(ach_current, ach_max=20):
+    ach_current = abs(ach_current)
     if ach_current <= 3:
         x1, y1 = 0, 0
         x2, y2 = 3, 50

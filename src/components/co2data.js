@@ -496,7 +496,7 @@ const Co2DataCard = ({ selectedDevice, selectedOutdoorDevice, selectedGuideline,
         </div>
       </div>
       
-      {/* <Dialog
+       {/* <Dialog
         open={showAdvice}
         onClose={handleClose}
       >
@@ -509,18 +509,15 @@ const Co2DataCard = ({ selectedDevice, selectedOutdoorDevice, selectedGuideline,
             Close
           </Button>
         </DialogActions>
-      </Dialog> */}
+      </Dialog>  */}
 
-      {/* {sensorData.co2_advice && (
-        alert(adviceMessage)
-      )} */}
-      {/* {sensorData.co2_advice && (
+      {sensorData.co2_advice && (
         <Snackbar open={showAdvice} autoHideDuration={null} onClose={handleClose}>
           <Alert onClose={handleClose} severity="error" sx={{ width: '100%', fontWeight: 'bold', fontSize: '1.2em', alignItems: 'center', justifyContent: 'center' }}>
             {adviceMessage}
           </Alert>
         </Snackbar>
-      )} */}
+      )}
     </Card>
   );
 };
