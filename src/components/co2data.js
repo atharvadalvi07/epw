@@ -14,6 +14,7 @@ import './index.css';
 import RadialChart from './radialChart';
 import GaugeChart from './gaugeChart';
 import SpiderChart from './radarChart';
+import Slide from '@mui/material/Slide';
 
 const Warning = ({ text }) => (
   <div className="warning">
@@ -22,6 +23,16 @@ const Warning = ({ text }) => (
   </div>
 );
 
+const AlertWarning = ({text}) => (
+  <div className="warning">
+    <AiOutlineWarning className="warning-icon" size={30}/>
+    <span className="warning-text">{text}</span>
+  </div>
+);
+
+const Transition = React.forwardRef(function Transition(props, ref) {
+  return <Slide direction="up" ref={ref} {...props} />;
+});
 
 async function fetchPythonBackendData(indoorImei, outdoorImei, guideline) {
   try {
@@ -487,37 +498,39 @@ const Co2DataCard = ({ selectedDevice, selectedOutdoorDevice, selectedGuideline,
       </div>
       <div className="charts-container">
         <div className='chart-wrapper flex '>
-              <GaugeChart value = {sensorData.wellness_index}/>
-              <SpiderChart data = {sensorData} color={getColor(sensorData.wellness_index, 'iew')}/>
-              
+            <GaugeChart value = {sensorData.wellness_index}/>
+            <SpiderChart data = {sensorData} color={getColor(sensorData.wellness_index, 'iew')}/>   
         </div>
         <div className="chart-wrapper">
           <Co2BarChart co2Data={histCo2Data} /> 
         </div>
       </div>
       
-       {/* <Dialog
+      <Dialog
         open={showAdvice}
         onClose={handleClose}
+        TransitionComponent={Transition}
+        keepMounted
+        aria-describedby="alert-dialog-slide-description"
       >
-        <DialogTitle>Advice to maintain air quality</DialogTitle>
+        <DialogTitle >Advice to maintain air quality</DialogTitle>
         <DialogContent>
-          <Warning text={adviceMessage} />
+          <AlertWarning text={adviceMessage} />
         </DialogContent>
         <DialogActions>
           <Button onClick={handleClose} color="primary">
             Close
           </Button>
         </DialogActions>
-      </Dialog>  */}
+      </Dialog> 
 
-      {sensorData.co2_advice && (
+      {/* {sensorData.co2_advice && (
         <Snackbar open={showAdvice} autoHideDuration={null} onClose={handleClose}>
           <Alert onClose={handleClose} severity="error" sx={{ width: '100%', fontWeight: 'bold', fontSize: '1.2em', alignItems: 'center', justifyContent: 'center' }}>
             {adviceMessage}
           </Alert>
         </Snackbar>
-      )}
+      )} */}
     </Card>
   );
 };

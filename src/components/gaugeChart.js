@@ -124,7 +124,6 @@ const GaugeChart = ({ value , sensorData}) => {
                     activeIndex={1}
                     activeShape={Arrow}
                 />
-                
             </PieChart>
             <div style={{
                 position: 'absolute',
