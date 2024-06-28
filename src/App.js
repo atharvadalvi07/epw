@@ -132,6 +132,21 @@ function App() {
                       </Select>
                     </FormControl>
                     <FormControl variant="outlined" style={{ minWidth: 200 }}>
+                      <InputLabel id="device-select-label">Select IEW guideline</InputLabel>
+                      <Select
+                        labelId="device-select-label"
+                        value={selectedIEWGuideline}
+                        onChange={handleIEWGuidelineChange}
+                        label="Select IEW guideline"
+                      >
+                        <MenuItem value="TC">Thermal Comfort Focus</MenuItem>
+                        <MenuItem value="AQ">Air Quality Focus</MenuItem>
+                        <MenuItem value="PP">Pollution Protection</MenuItem>
+                        <MenuItem value="GG">Green Guardian</MenuItem>
+                        <MenuItem value="Wellness">Overall Wellness</MenuItem>
+                      </Select>
+                    </FormControl>
+                    <FormControl variant="outlined" style={{ minWidth: 200 }}>
                       <InputLabel id="device-select-label">Select Compliance</InputLabel>
                       <Select
                         labelId="device-select-label"
@@ -154,6 +169,7 @@ function App() {
                         <MenuItem value="NBC_INDIA">NBC INDIA</MenuItem>
                         <MenuItem value="WELL">WELL</MenuItem>
                       </Select>
+                      
                     </FormControl>
                     <Tooltip
                       title={<GuidelineInfo selectedGuideline={selectedGuideline} />}
@@ -169,21 +185,7 @@ function App() {
                         />
                       </IconButton>
                     </Tooltip>
-                    <FormControl variant="outlined" style={{ minWidth: 200 }}>
-                      <InputLabel id="device-select-label">Select IEW guideline</InputLabel>
-                      <Select
-                        labelId="device-select-label"
-                        value={selectedIEWGuideline}
-                        onChange={handleIEWGuidelineChange}
-                        label="Select IEW guideline"
-                      >
-                        <MenuItem value="TC">Thermal Comfort Focus</MenuItem>
-                        <MenuItem value="AQ">Air Quality Focus</MenuItem>
-                        <MenuItem value="PP">Pollution Protection</MenuItem>
-                        <MenuItem value="GG">Green Guardian</MenuItem>
-                        <MenuItem value="Wellness">Overall Wellness</MenuItem>
-                      </Select>
-                    </FormControl>
+                    
                     
                   </div>
                 </div>
