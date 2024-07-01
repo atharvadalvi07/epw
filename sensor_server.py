@@ -1,3 +1,4 @@
+#dockerize flask app
 from flask import Flask, jsonify, request
 import math
 import pandas as pd
@@ -8,7 +9,7 @@ from sklearn.linear_model import LinearRegression
 from flask_cors import CORS
 
 app = Flask(__name__)
-CORS(app, origins=["http://localhost:3000"])
+CORS(app)
 
 flag_ac = True
 
@@ -381,6 +382,10 @@ def get_data():
         iew_co2 = calculate_iew_co2(co2_indoor)
         iew_ach = calculate_iew_ach(m_value)  
         iew_tvoc = calculate_iew_tvoc(voc_outdoor)
+
+        print(f'https://atmos.urbansciences.in/adp/v4/getDeviceDataParam/imei/{imei}/params/pm2.5cnc,pm10cnc,co2conc,pres,temp,humidity,vocconc/'
+                                          + f'startdate/{start_date}/enddate/{just_prev_date}/'
+                                          + f'ts/mm/avg/1/api/mm8IZ3MGrj?gaps=1&gap_value=NULL')
         
         
         

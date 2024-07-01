@@ -19,6 +19,7 @@ async function fetchPythonBackendData(indoorImei, outdoorImei, guideline) {
   }
 }
 
+
 function App() {
   const [sensorData, setSensorData] = useState(null);
   const [outdoorData, setOutdoorData] = useState(null);

@@ -47,6 +47,7 @@ async function fetchPythonBackendData(indoorImei, outdoorImei, guideline) {
   }
 }
 
+
 const Co2DataCard = ({ selectedDevice, selectedOutdoorDevice, selectedGuideline, selectedIEWGuideline}) => {
   const [co2Data, setCo2Data] = useState([]);
   const [sensorData, setSensorData] = useState({});
