@@ -5,6 +5,8 @@ import './globals.css';
 import Co2DataCard from './components/co2data';
 import GraphSet from './graphs/page'; 
 import GuidelineInfo from './guidelineInfo';
+import ReactLoading from 'react-loading';
+import LoadingJS from './components/Loading';
 
 async function fetchPythonBackendData(indoorImei, outdoorImei, guideline) {
   try {
@@ -199,7 +201,7 @@ function App() {
       </Routes>
       <div style={{ padding: 20 }}>
         {loading ? (
-          <p>Loading...</p>
+          <p><LoadingJS /></p>
         ) : error ? (
           <p>Error: {error}</p>
         ) : sensorData ? (

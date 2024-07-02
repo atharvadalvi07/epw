@@ -27,6 +27,14 @@ body {
   border-bottom: 1px solid #e0e0e0;
 }
 
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  transform: translateY(-10%);
+}
+
 .logo-container {
   margin-right: 20px;
 }
