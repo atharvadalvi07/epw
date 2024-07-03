@@ -86,18 +86,18 @@ svg {
 
 .container {
   display: flex;
-  gap: 8px; /* Add gap between text and cards */
-  align-items: flex-start; /* Align text and cards at the top */
+  gap: 8px;
+  align-items: flex-start; 
 }
 
 .text {
-  flex: 1; /* Allow text to take up available space */
+  flex: 1;
 }
 
 .card-container {
   display: flex;
-  flex-wrap: wrap; /* Allow cards to wrap to the next line if needed */
-  gap: 1px; /* Add gap between cards */
+  flex-wrap: wrap; 
+  gap: 1px; 
 }
 
 /*

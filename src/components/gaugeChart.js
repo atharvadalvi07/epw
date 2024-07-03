@@ -36,7 +36,7 @@ const GaugeChart = ({ value , sensorData}) => {
         outerRadius: '90%'
     };
 
-    const Arrow = ({ cx, cy, midAngle, outerRadius }) => { //eslint-disable-line react/no-multi-comp
+    const Arrow = ({ cx, cy, midAngle, outerRadius }) => { 
         const RADIAN = Math.PI / 180;
         const sin = Math.sin(-RADIAN * midAngle);
         const cos = Math.cos(-RADIAN * midAngle);
